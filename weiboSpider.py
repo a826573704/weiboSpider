@@ -19,7 +19,8 @@ from tqdm import tqdm
 
 
 class Weibo(object):
-    cookie = {'Cookie': 'your cookie'}  # 将your cookie替换成自己的cookie
+    my_cookie = 'ALF=1569200618; SUB=_2A25wZPytDeRhGeNO6VMV8izLyTyIHXVTpoTlrDV6PUJbkdANLWvQkW1NTwZ1RgFmQsKGov1Wa33gsYrYyZmkgTCE; SUHB=0gHiZMobzXOuK9; SCF=Aj3wB518exVeIRRKk6YQHGhH7NxTaxl2_QQjaV-9pq-_L7tkzTKlNCMkDQrWk46eGIAQQ3K_fX6z_Dyd5CIn3aU.; SSOLoginState=1566608637; MLOGIN=1; _T_WM=25214603102; WEIBOCN_FROM=1110006030; M_WEIBOCN_PARAMS=luicode%3D20000174%26uicode%3D20000174'
+    cookie = {'Cookie': my_cookie}  # 将your cookie替换成自己的cookie
 
     def __init__(self, user_id, filter=0, pic_download=0, video_download=0):
         """Weibo类初始化"""
@@ -644,7 +645,7 @@ class Weibo(object):
 def main():
     try:
         # 使用实例,输入一个用户id，所有信息都会存储在wb实例中
-        user_id = 1669879400  # 可以改成任意合法的用户id（爬虫的微博id除外）
+        user_id = 5036836704  # 可以改成任意合法的用户id（爬虫的微博id除外）
         filter = 1  # 值为0表示爬取全部微博（原创微博+转发微博），值为1表示只爬取原创微博
         pic_download = 1  # 值为0代表不下载微博原始图片,1代表下载微博原始图片
         video_download = 1  # 值为0代表不下载微博视频,1代表下载微博视频
